@@ -194,6 +194,7 @@ func (c *runnerContext) run(cmd *cobra.Command, args []string) error {
 		return fmt.Errorf("there is no configuration, run the 'login' command")
 	}
 
+
 	// Create the gRPC connection from the configuration:
 	conn, err := cfg.Connect(ctx, cmd.Flags())
 	if err != nil {
